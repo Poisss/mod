@@ -1,0 +1,20 @@
+{
+    "Group": "CustomMapMaker",
+    "Name": "MapMaker",
+    "Version": "1.0.0",
+    "Description": "Create, manage and share custom game maps",
+    "Authors": [
+        {
+            "Name": "CustomMapMaker",
+            "Email": "",
+            "Url": ""
+        }
+    ],
+    "Website": "",
+    "DisabledByDefault": false,
+    "IncludesAssetPack": false,
+    "Dependencies": {},
+    "OptionalDependencies": {},
+    "ServerVersion": "0.5.x",
+    "Main": "com.example.custommapmaker.CustomMapMakerPlugin"
+}

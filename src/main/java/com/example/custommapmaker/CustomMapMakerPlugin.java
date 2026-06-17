@@ -7,9 +7,9 @@ import com.example.custommapmaker.service.CustomMapManager;
 import com.example.custommapmaker.service.WorldCreationService;
 import com.example.custommapmaker.ui.MapUIHandler;
 import com.example.custommapmaker.world.EmptyPlatformGenerator;
-import com.hypixel.hytale.plugin.early.EarlyPlugin;
-import com.hypixel.hytale.plugin.java.JavaPlugin;
-import com.hypixel.hytale.plugin.java.JavaPluginInit;
+
+import com.hypixel.hytale.server.core.plugin.JavaPlugin;
+import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
 import com.hypixel.hytale.server.core.component.Component;
 import com.hypixel.hytale.server.core.component.ComponentRegistry;
 import com.hypixel.hytale.server.core.entity.Universe;
@@ -23,7 +23,7 @@ import org.slf4j.LoggerFactory;
 
 import java.util.UUID;
 
-public final class CustomMapMakerPlugin extends JavaPlugin implements EarlyPlugin {
+public final class CustomMapMakerPlugin extends JavaPlugin {
 
     private static final Logger LOGGER = LoggerFactory.getLogger(CustomMapMakerPlugin.class);
 
@@ -62,7 +62,7 @@ public final class CustomMapMakerPlugin extends JavaPlugin implements EarlyPlugi
         this.mapManager.initialize(worldCreationService);
 
         this.uiHandler = new MapUIHandler(this, mapManager, init.eventBus());
-        this.commandHandler = new MapCommandHandler(mapManager, init.commandManager(), this);
+        this.commandHandler = new MapCommandHandler(mapManager, init.commandManager(), this.config);
         this.eventListener = new MapEventListener(mapManager, init.eventBus());
 
         LOGGER.info("CustomMapMaker plugin setup complete!");
