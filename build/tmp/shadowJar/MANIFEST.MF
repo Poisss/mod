@@ -1,6 +1,0 @@
-Manifest-Version: 1.0
-Main-Class: com.example.custommapmaker.CustomMapMakerPlugin
-Plugin-Class: com.example.custommapmaker.CustomMapMakerPlugin
-Plugin-Name: CustomMapMaker
-Plugin-Version: 1.0.0
-
